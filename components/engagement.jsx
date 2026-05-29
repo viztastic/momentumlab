@@ -34,7 +34,7 @@ function Engagement() {
         <div className="eng-head reveal">
           <span className="eyebrow"><span className="num">05</span> What you're buying</span>
           <h2 className="h-xl">
-            Not a workshop. An <span className="accent-ital">operating-system install.</span>
+            Not a one-day workshop. A <span className="accent-ital">way of working that lasts.</span>
           </h2>
           <p className="lede">
             Every engagement runs on the same behavioural spine: Diagnose, Reset,

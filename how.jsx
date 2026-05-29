@@ -112,7 +112,7 @@ function HowPage() {
             <a href="Momentum Lab.html" className="how-back reveal">← Back to Momentum Lab</a>
             <span className="eyebrow reveal">How it works</span>
             <h1 className="h-display how-hero-head reveal">
-              What you're actually <span className="accent-ital">installing.</span>
+              What you're actually <span className="accent-ital">building.</span>
             </h1>
             <p className="lede how-hero-lede reveal">
               Momentum Lab installs behavioural systems and leadership rhythms that
