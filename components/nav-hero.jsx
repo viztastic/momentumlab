@@ -16,12 +16,17 @@ function Logo({ night }) {
 
 function Nav() {
   const [scrolled, setScrolled] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
   React.useEffect(() => {
     const on = () => setScrolled(window.scrollY > 24);
     on();
     window.addEventListener("scroll", on, { passive: true });
     return () => window.removeEventListener("scroll", on);
   }, []);
+  React.useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [open]);
   const links = [
     ["The problem", "#problem"],
     ["The method", "#method"],
@@ -29,7 +34,7 @@ function Nav() {
     ["How it works", "How It Works.html"],
   ];
   return (
-    <header className={"nav" + (scrolled ? " scrolled" : "")}>
+    <header className={"nav" + (scrolled || open ? " scrolled" : "")}>
       <div className="nav-inner wrap">
         <Logo />
         <nav className="nav-links">
@@ -38,6 +43,24 @@ function Nav() {
           ))}
         </nav>
         <a href="#checkin" className="btn btn-primary nav-cta">Run the (free) check-in</a>
+        <button
+          className={"nav-toggle" + (open ? " open" : "")}
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          onClick={() => setOpen((v) => !v)}
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div className={"nav-mobile" + (open ? " open" : "")}>
+        <nav className="nav-mobile-links">
+          {links.map(([label, href]) => (
+            <a key={href} href={href} onClick={() => setOpen(false)}>{label}</a>
+          ))}
+        </nav>
+        <a href="#checkin" className="btn btn-primary nav-mobile-cta" onClick={() => setOpen(false)}>
+          Run the (free) check-in
+        </a>
       </div>
     </header>
   );

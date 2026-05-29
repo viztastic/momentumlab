@@ -15,11 +15,16 @@ function HowLogo() {
 
 function HowNav() {
   const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
   useEffect(() => {
     const on = () => setScrolled(window.scrollY > 24);
     on(); window.addEventListener("scroll", on, { passive: true });
     return () => window.removeEventListener("scroll", on);
   }, []);
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [open]);
   const links = [
     ["What it is", "#what"],
     ["The method", "#practice"],
@@ -27,13 +32,29 @@ function HowNav() {
     ["What changes", "#changes"],
   ];
   return (
-    <header className={"nav" + (scrolled ? " scrolled" : "")}>
+    <header className={"nav" + (scrolled || open ? " scrolled" : "")}>
       <div className="nav-inner wrap">
         <HowLogo />
         <nav className="nav-links">
           {links.map(([l, h]) => <a key={h} href={h}>{l}</a>)}
         </nav>
         <a href="Momentum Lab.html#checkin" className="btn btn-primary nav-cta">Run the (free) check-in</a>
+        <button
+          className={"nav-toggle" + (open ? " open" : "")}
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          onClick={() => setOpen((v) => !v)}
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div className={"nav-mobile" + (open ? " open" : "")}>
+        <nav className="nav-mobile-links">
+          {links.map(([l, h]) => <a key={h} href={h} onClick={() => setOpen(false)}>{l}</a>)}
+        </nav>
+        <a href="Momentum Lab.html#checkin" className="btn btn-primary nav-mobile-cta" onClick={() => setOpen(false)}>
+          Run the (free) check-in
+        </a>
       </div>
     </header>
   );
@@ -41,7 +62,7 @@ function HowNav() {
 
 /* ---- content data ---- */
 const ISNT = [
-  ["Not a motivational workshop", "The energy in the room fades. We're after what holds once it does."],
+  ["Not just a motivational workshop", "We run a genuinely great one, led by world-class facilitators. We just don't pack up and leave you to hold it alone."],
   ["Not wellbeing or therapy", "We work on how teams operate, not on individuals' inner lives."],
   ["Not generic culture consulting", "No values posters. Specific behaviours, installed and reinforced."],
 ];
@@ -56,7 +77,7 @@ const PRACTICE = [
   { n: "01", key: "Diagnose", produces: "Behavioural diagnostic + team map",
     body: "We read where each team actually sits: how activated, how connected, then locate the friction driving disengagement before it's explained away as personality." },
   { n: "02", key: "Reset", produces: "Shared operating agreement",
-    body: "In a facilitated workshop, the team rebuilds trust, names the unspoken friction safely, and agrees, explicitly, how it wants to operate from here." },
+    body: "A world-class facilitated workshop that opens with a Tomorrow Party: the team pictures who it wants to become, then rebuilds trust, names the unspoken friction safely, and agrees, explicitly, how it will operate from here." },
   { n: "03", key: "Embed", produces: "Operating-rhythm redesign",
     body: "We install the new patterns into the real working week: meeting structures, decision ownership, reflection cadences and leadership rhythms that fit how the team works." },
   { n: "04", key: "Reinforce", produces: "Reinforcement framework + check-ins",
@@ -64,7 +85,7 @@ const PRACTICE = [
 ];
 
 const AGENDA = [
-  ["Open", "Where are we, honestly?", "A shared, no-blame read on how the team is currently operating, using the behavioural map as a common language."],
+  ["The Tomorrow Party", "Picture who you could become", "We open by vividly imagining where the team and each person wants to be tomorrow. It's energising and specific, and everything that follows is built to get you there."],
   ["Surface", "What's actually in the way", "Name the friction, the unspoken tension and the patterns no one's been saying out loud, safely."],
   ["Rebuild", "How we want to work", "Agree the trust, clarity and contribution norms the team will actually commit to."],
   ["Design", "The operating rhythms", "Redesign meetings, decisions and reflection cadences so the new behaviour has somewhere to live."],
@@ -115,10 +136,9 @@ function HowPage() {
               What you're actually <span className="accent-ital">building.</span>
             </h1>
             <p className="lede how-hero-lede reveal">
-              Momentum Lab installs behavioural systems and leadership rhythms that
-              improve trust, resilience and sustainable contribution across teams.
-              Here's exactly how an engagement works, and what your organisation
-              walks away with.
+              It starts with a world-class workshop and ends with a system your
+              team keeps. Here's exactly how an engagement works, what happens in
+              the room, and what your organisation walks away with.
             </p>
             <div className="how-hero-cta reveal">
               <a href="Momentum Lab.html#checkin" className="btn btn-primary">Run the 5-minute check-in
@@ -137,9 +157,10 @@ function HowPage() {
               <h2 className="h-lg">A behavioural operating systems company for modern organisations.</h2>
               <p className="lede">
                 Most teams don't lack capability. They lack the operating patterns
-                that let trust, contribution and momentum hold under pressure. We
-                diagnose those patterns, reset them with the team, embed them into
-                the working week, and reinforce them over time.
+                that let trust, contribution and momentum hold under pressure. It
+                starts with a world-class workshop, then we embed those patterns
+                into the working week and reinforce them over time, so the shift
+                outlasts the day in the room.
               </p>
             </div>
             <div className="how-isnt reveal">
@@ -204,10 +225,10 @@ function HowPage() {
               <span className="eyebrow on-night"><span className="num">04</span> The workshop</span>
               <h2 className="h-lg">What actually happens in the room.</h2>
               <p className="lede">
-                The Reset workshop is one to two days, facilitated. It moves a team
-                from an honest read of where it is, to a concrete agreement on how
-                it will operate, with the reinforcement schedule booked before
-                anyone leaves.
+                One to two days, led by world-class facilitators. It opens with a
+                Tomorrow Party, the team's vision of who it wants to become, then
+                moves to a concrete agreement on how it will operate, with the
+                reinforcement schedule booked before anyone leaves.
               </p>
             </div>
             <div className="how-agenda reveal">

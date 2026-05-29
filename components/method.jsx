@@ -35,28 +35,28 @@ function Method() {
         <div className="method-intro reveal">
           <span className="eyebrow"><span className="num">02</span> The method</span>
           <h2 className="h-xl">
-            Most workshops fade <span className="accent-ital">within weeks.</span>
+            Most workshops end when everyone <span className="accent-ital">leaves the room.</span>
           </h2>
           <p className="lede">
-            Because motivation without reinforcement rarely survives operational
-            pressure. We don't run a good day in a room. We install the way a team
-            operates, and the systems that keep it.
+            Ours doesn't. We run a workshop worth booking on its own, led by
+            world-class facilitators. The difference is what we leave behind: an
+            operating system that keeps the shift alive long after the day ends.
           </p>
         </div>
 
-        {/* why normal workshops fail vs what we install */}
+        {/* where most workshops stop vs where we keep going */}
         <div className="contrast reveal">
           <div className="contrast-col fade">
-            <div className="contrast-tag">The usual workshop</div>
+            <div className="contrast-tag">Where most workshops stop</div>
             <ul className="contrast-list">
               <li>A high-energy day, then back to the same week</li>
               <li>Insight that depends on individuals remembering</li>
-              <li>Motivation with no system to hold it</li>
+              <li>Momentum with no system to hold it</li>
               <li>Change that fades the moment pressure returns</li>
             </ul>
           </div>
           <div className="contrast-col keep">
-            <div className="contrast-tag accent">What Momentum Lab installs</div>
+            <div className="contrast-tag accent">Where Momentum Lab keeps going</div>
             <ul className="contrast-list">
               <li>Operating rhythms built into the real working week</li>
               <li>Behaviour reinforced by structure, not willpower</li>

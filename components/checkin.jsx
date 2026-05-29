@@ -73,6 +73,8 @@ function CheckinDemo() {
   const [step, setStep] = useState(0); // 0..n-1 questions, then 'result'
   const [answers, setAnswers] = useState({});
   const [thinking, setThinking] = useState(false);
+  const [email, setEmail] = useState("");
+  const [sent, setSent] = useState(false);
   const done = step >= CHECKIN_Q.length;
   const scrollRef = useRef(null);
 
@@ -84,7 +86,13 @@ function CheckinDemo() {
     setTimeout(() => { setThinking(false); setStep((s) => s + 1); }, 720);
   };
 
-  const reset = () => { setStep(0); setAnswers({}); setThinking(false); };
+  const reset = () => { setStep(0); setAnswers({}); setThinking(false); setEmail(""); setSent(false); };
+
+  const submitEmail = (e) => {
+    e.preventDefault();
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return;
+    setSent(true);
+  };
 
   const result = done ? readResult(answers) : null;
   const t = result ? { bg: `var(--c-${result.tone}-bg)`, ink: `var(--c-${result.tone}-ink)` } : null;
@@ -165,6 +173,39 @@ function CheckinDemo() {
                   {result.next.map((b) => <li key={b}>{b}</li>)}
                 </ul>
               </div>
+            </div>
+            <div className="checkin-begin">
+              {!sent ? (
+                <React.Fragment>
+                  <div className="checkin-begin-head">
+                    <span className="checkin-begin-label">Where this goes next</span>
+                    <p className="checkin-begin-copy">A read is a start, not an answer. Leave your email and we'll send the full five-minute check-in and begin the conversation together.</p>
+                  </div>
+                  <form className="checkin-begin-form" onSubmit={submitEmail}>
+                    <input
+                      type="email"
+                      className="checkin-begin-input"
+                      placeholder="you@yourteam.com"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      aria-label="Your work email"
+                      required
+                    />
+                    <button type="submit" className="btn btn-primary checkin-begin-btn">
+                      Begin together
+                      <svg className="arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </button>
+                  </form>
+                </React.Fragment>
+              ) : (
+                <div className="checkin-begin-sent">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="var(--accent)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>
+                  <div>
+                    <strong>We're on it.</strong>
+                    <span>The full check-in is on its way to {email}. We'll be in touch to begin together.</span>
+                  </div>
+                </div>
+              )}
             </div>
             <div className="checkin-result-foot">
               <span>This is a 3-question taster. The full check-in takes five minutes.</span>

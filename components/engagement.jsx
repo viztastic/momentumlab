@@ -2,7 +2,7 @@
 
 const ENGAGEMENT_PHASES = [
   { n: "01", key: "Diagnose", when: "Week 0", desc: "Behavioural diagnostic and team mapping. We locate where each team sits and what's driving the drift." },
-  { n: "02", key: "Reset", when: "Workshop · 1–2 days", desc: "In the room: rebuild trust, surface friction safely, and agree how the team actually wants to operate." },
+  { n: "02", key: "Reset", when: "The workshop · 1–2 days", desc: "It starts with a Tomorrow Party: a vivid picture of the team and the people you want to become. From there, world-class facilitators rebuild trust and agree how the team will actually operate." },
   { n: "03", key: "Embed", when: "Weeks 1–8", desc: "Install operating rhythms, meeting structures and leadership practices into the real working week." },
   { n: "04", key: "Reinforce", when: "Ongoing", desc: "Scheduled reinforcement check-ins and accountability structures keep the change from quietly regressing." },
 ];
@@ -34,12 +34,12 @@ function Engagement() {
         <div className="eng-head reveal">
           <span className="eyebrow"><span className="num">05</span> What you're buying</span>
           <h2 className="h-xl">
-            Not a one-day workshop. A <span className="accent-ital">way of working that lasts.</span>
+            It starts with a workshop. It ends with a <span className="accent-ital">system.</span>
           </h2>
           <p className="lede">
-            Every engagement runs on the same behavioural spine: Diagnose, Reset,
-            Embed, Reinforce. Here's what that looks like in practice, and exactly
-            what your organisation walks away with.
+            Every engagement is built around a world-class workshop, then runs on the
+            same behavioural spine: Diagnose, Reset, Embed, Reinforce. You can book the
+            workshop on its own, or let us leave the whole operating system behind.
           </p>
         </div>
 
