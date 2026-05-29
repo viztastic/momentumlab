@@ -1,0 +1,110 @@
+/* global React */
+
+function Logo({ night }) {
+  return (
+    <a href="#top" className="logo" aria-label="Momentum Lab home">
+      <svg className="logo-mark" viewBox="0 0 28 28" aria-hidden="true">
+        <circle cx="14" cy="14" r="12.5" fill="none" stroke={night ? "var(--on-night-2)" : "var(--ink)"} strokeWidth="1.4"/>
+        <path d="M7 17.5 C 10 9, 13 9, 14 13.5 C 15 18, 18 18, 21 10.5" fill="none" stroke="var(--accent)" strokeWidth="2" strokeLinecap="round"/>
+      </svg>
+      <span className="logo-word" style={{ color: night ? "var(--on-night)" : "var(--ink)" }}>
+        Momentum<span className="logo-lab">Lab</span>
+      </span>
+    </a>
+  );
+}
+
+function Nav() {
+  const [scrolled, setScrolled] = React.useState(false);
+  React.useEffect(() => {
+    const on = () => setScrolled(window.scrollY > 24);
+    on();
+    window.addEventListener("scroll", on, { passive: true });
+    return () => window.removeEventListener("scroll", on);
+  }, []);
+  const links = [
+    ["The problem", "#problem"],
+    ["The method", "#method"],
+    ["Check-in", "#checkin"],
+    ["Workshops", "#workshops"],
+  ];
+  return (
+    <header className={"nav" + (scrolled ? " scrolled" : "")}>
+      <div className="nav-inner wrap">
+        <Logo />
+        <nav className="nav-links">
+          {links.map(([label, href]) => (
+            <a key={href} href={href}>{label}</a>
+          ))}
+        </nav>
+        <a href="#checkin" className="btn btn-primary nav-cta">Run the (free) check-in</a>
+      </div>
+    </header>
+  );
+}
+
+const HERO_COPY = {
+  A: {
+    eyebrow: "Behavioural transformation for teams",
+    head: ["Most people don't", ["burn out", " loudly."]],
+  },
+  B: {
+    eyebrow: "Behavioural transformation for teams",
+    head: ["Your best people", ["rarely quit", " out loud."]],
+  },
+};
+
+function Hero({ variant = "A" }) {
+  const c = HERO_COPY[variant] || HERO_COPY.A;
+  return (
+    <section className="hero section" id="top">
+      <div className="wrap hero-grid">
+        <div className="hero-copy">
+          <span className="eyebrow reveal">{c.eyebrow}</span>
+          <h1 className="h-display hero-head reveal">
+            {c.head[0]} <span className="accent-ital">{c.head[1][0]}</span>{c.head[1][1]}
+          </h1>
+          <div className="hero-sub reveal">
+            <p className="hero-sub-lines">
+              They slowly disconnect.<br/>
+              From confidence. From contribution. From each other.
+            </p>
+            <p className="lede">
+              Momentum Lab helps teams rebuild momentum before disengagement
+              becomes culture.
+            </p>
+          </div>
+          <div className="hero-cta reveal">
+            <a href="#checkin" className="btn btn-primary">
+              Run the 5-minute check-in
+              <svg className="arrow" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#workshops" className="btn btn-ghost">Book a team reset workshop</a>
+          </div>
+          <p className="hero-trust reveal">
+            For teams who'd rather correct drift early than manage burnout later.
+          </p>
+        </div>
+
+        <div className="hero-visual reveal">
+          <image-slot
+            id="hero-team"
+            class="hero-img"
+            shape="rounded"
+            radius="20"
+            placeholder="Drop a hero image — a real team, mid-work, not performing for the camera"
+          ></image-slot>
+          <div className="hero-signal">
+            <span className="hero-signal-dot"></span>
+            <div>
+              <div className="hero-signal-label">Behavioural read</div>
+              <div className="hero-signal-val">Quiet disengagement, rising</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+Object.assign(window, { Nav, Hero, Logo, HERO_COPY });
