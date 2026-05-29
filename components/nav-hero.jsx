@@ -26,7 +26,7 @@ function Nav() {
     ["The problem", "#problem"],
     ["The method", "#method"],
     ["Check-in", "#checkin"],
-    ["Workshops", "#workshops"],
+    ["How it works", "How It Works.html"],
   ];
   return (
     <header className={"nav" + (scrolled ? " scrolled" : "")}>
@@ -45,12 +45,12 @@ function Nav() {
 
 const HERO_COPY = {
   A: {
-    eyebrow: "Behavioural transformation for teams",
-    head: ["Most people don't", ["burn out", " loudly."]],
+    eyebrow: "A behavioural operating system for modern teams",
+    head: ["Human flourishing shouldn't be reserved for", ["top performers", "."]],
   },
   B: {
-    eyebrow: "Behavioural transformation for teams",
-    head: ["Your best people", ["rarely quit", " out loud."]],
+    eyebrow: "A behavioural operating system for modern teams",
+    head: ["Sustainable momentum scales better than", ["heroics", "."]],
   },
 };
 
@@ -58,20 +58,28 @@ function Hero({ variant = "A" }) {
   const c = HERO_COPY[variant] || HERO_COPY.A;
   return (
     <section className="hero section" id="top">
-      <div className="wrap hero-grid">
+      <div className="wrap">
+        <div className="hero-visual reveal">
+          <image-slot
+            id="hero-team"
+            class="hero-img"
+            shape="rounded"
+            radius="20"
+            src={typeof window !== "undefined" ? window.__HERO_IMG : undefined}
+            placeholder="Drop a hero image: a real team mid-work, not performing for the camera"
+          ></image-slot>
+        </div>
+
         <div className="hero-copy">
           <span className="eyebrow reveal">{c.eyebrow}</span>
           <h1 className="h-display hero-head reveal">
             {c.head[0]} <span className="accent-ital">{c.head[1][0]}</span>{c.head[1][1]}
           </h1>
           <div className="hero-sub reveal">
-            <p className="hero-sub-lines">
-              They slowly disconnect.<br/>
-              From confidence. From contribution. From each other.
-            </p>
             <p className="lede">
-              Momentum Lab helps teams rebuild momentum before disengagement
-              becomes culture.
+              Momentum Lab helps organisations build healthier operating systems
+              for sustainable contribution, trust and momentum across teams,
+              not just in a few exceptional people.
             </p>
           </div>
           <div className="hero-cta reveal">
@@ -82,25 +90,8 @@ function Hero({ variant = "A" }) {
             <a href="#workshops" className="btn btn-ghost">Book a team reset workshop</a>
           </div>
           <p className="hero-trust reveal">
-            For teams who'd rather correct drift early than manage burnout later.
+            Diagnosed, installed and reinforced over time. Not a one-day workshop.
           </p>
-        </div>
-
-        <div className="hero-visual reveal">
-          <image-slot
-            id="hero-team"
-            class="hero-img"
-            shape="rounded"
-            radius="20"
-            placeholder="Drop a hero image — a real team, mid-work, not performing for the camera"
-          ></image-slot>
-          <div className="hero-signal">
-            <span className="hero-signal-dot"></span>
-            <div>
-              <div className="hero-signal-label">Behavioural read</div>
-              <div className="hero-signal-val">Quiet disengagement, rising</div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

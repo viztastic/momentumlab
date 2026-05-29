@@ -3,7 +3,7 @@
 const DECLINE_STAGES = [
   {
     n: "01", name: "Drained",
-    desc: "The work still gets done — but on reserves. Energy goes to surviving the week, not shaping it.",
+    desc: "The work still gets done, but on reserves. Energy goes to surviving the week, not shaping it.",
     tags: ["Reactive work", "Survival mode"],
   },
   {
@@ -29,7 +29,7 @@ function Problem() {
           </h2>
           <p className="lede problem-lede">
             Disengagement rarely shows up as a resignation. It shows up as a slow
-            decline that's easy to explain away — until it's the culture.
+            decline that's easy to explain away, until it's the culture.
           </p>
         </div>
 
@@ -50,7 +50,7 @@ function Problem() {
         <div className="problem-foot reveal">
           <div className="problem-mini">
             <MatrixMini />
-            <span className="problem-mini-cap">Where the drift lands — mapped in full further down.</span>
+            <span className="problem-mini-cap">Where the drift lands. Mapped in full further down.</span>
           </div>
           <blockquote className="problem-punch">
             The problem usually isn't capability.

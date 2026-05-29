@@ -85,7 +85,9 @@ function App() {
         <Method />
         <Checkin />
         <Workshops />
+        <Engagement />
         <Proof />
+        <Belief />
         <FinalCTA variant={t.finalVariant} />
       </main>
       <Footer />
@@ -101,9 +103,9 @@ function App() {
         <TweakToggle label="Dark problem section" value={t.darkProblem}
           onChange={(v) => setTweak("darkProblem", v)} />
 
-        <TweakSection label="Copy — A/B" />
+        <TweakSection label="Copy variants" />
         <TweakRadio label="Hero headline" value={t.heroVariant}
-          options={[{ value: "A", label: "Burn out" }, { value: "B", label: "Rarely quit" }]}
+          options={[{ value: "A", label: "Top performers" }, { value: "B", label: "Heroics" }]}
           onChange={(v) => setTweak("heroVariant", v)} />
         <TweakRadio label="Final headline" value={t.finalVariant}
           options={[{ value: "A", label: "Personality" }, { value: "B", label: "Lucky teams" }]}

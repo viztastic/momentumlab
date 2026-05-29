@@ -15,7 +15,7 @@ const MATRIX_ZONES = [
     blurb: "High stress, tunnel vision, survival mode.",
     flag: "Burnout risk", flagIcon: "warn",
     signals: ["Reactive work", "Low clarity", "Emotional withdrawal"],
-    move: "Reset first. Lower the load before asking for more — trust can't rebuild under threat.",
+    move: "Reset first. Lower the load before asking for more; trust can't rebuild under threat.",
   },
   {
     id: "anxious", row: 0, col: 1, tone: "amber",
@@ -30,7 +30,7 @@ const MATRIX_ZONES = [
     id: "driven", row: 0, col: 2, tone: "pink",
     kicker: "Hyperarousal · Other-focused",
     title: "Driven but fragile",
-    blurb: "High output, prosocial — but approaching the edge.",
+    blurb: "High output and prosocial, but approaching the edge.",
     flag: "Watch closely", flagIcon: "bolt",
     signals: ["High output", "Carrying others", "Running hot"],
     move: "Reinforce sustainable pacing. Protect your strongest contributors from quiet over-reliance.",
@@ -48,7 +48,7 @@ const MATRIX_ZONES = [
     id: "sweet", row: 1, col: 1, tone: "olive",
     kicker: "Optimal arousal · Transitional",
     title: "The sweet spot",
-    blurb: "Peak performance zone — resilient and engaged.",
+    blurb: "Peak performance zone. Resilient and engaged.",
     flag: "Target state", flagIcon: "star",
     signals: ["Clear ownership", "Steady trust", "Sustainable pace"],
     move: "Reinforce what's working. Most teams arrive here and drift back without a cadence to hold it.",
@@ -143,22 +143,35 @@ function MomentumMatrix() {
   );
 }
 
-/* ---- Small static preview (Problem section) ---- */
+/* ---- Polished static preview (Problem section) ---- */
 function MatrixMini() {
   return (
-    <div className="mtx-mini" aria-hidden="true">
-      {MATRIX_ZONES.map((z) => {
-        const zt = tints(z.tone);
-        const isTarget = z.id === "sweet";
-        return (
-          <div key={z.id} className={"mtx-mini-cell" + (isTarget ? " target" : "")} style={{ background: zt.bg, color: zt.ink }}>
-            <span>{z.title}</span>
-          </div>
-        );
-      })}
-      <svg className="mtx-mini-drift" viewBox="0 0 100 66" preserveAspectRatio="none">
-        <path d="M18 16 C 42 28, 54 30, 50 50" fill="none" stroke="var(--accent)" strokeWidth="1.2" strokeDasharray="2.5 3" strokeLinecap="round"/>
-      </svg>
+    <div className="mtx-mini">
+      <div className="mtx-mini-grid" aria-hidden="true">
+        {MATRIX_ZONES.map((z) => {
+          const zt = tints(z.tone);
+          const target = z.id === "sweet";
+          const start = z.id === "overwhelm";
+          return (
+            <div
+              key={z.id}
+              className={"mtx-mini-cell" + (target ? " target" : "") + (start ? " start" : "")}
+              style={{ background: zt.bg, color: zt.ink }}
+            >
+              <span className="mtx-mini-title">{z.title}</span>
+              {start && <span className="mtx-mini-tag">Where drift begins</span>}
+              {target && <span className="mtx-mini-tag">◆ Target state</span>}
+            </div>
+          );
+        })}
+      </div>
+      <div className="mtx-mini-legend">
+        <span><i className="md rose"></i>Drained &amp; reactive</span>
+        <svg viewBox="0 0 34 12" width="34" height="12" fill="none" aria-hidden="true">
+          <path d="M1 6h27M24 2l5 4-5 4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+        <span><i className="md olive"></i>Resilient &amp; engaged</span>
+      </div>
     </div>
   );
 }

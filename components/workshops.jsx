@@ -36,7 +36,7 @@ function Workshops() {
           </h2>
           <p className="lede">
             Not a day of energy. A change in the operating system. Each one installs
-            specific behaviours — then reinforces them long after we've left the room.
+            specific behaviours, then reinforces them long after we've left the room.
           </p>
         </div>
 
@@ -72,7 +72,7 @@ const OBSERVATIONS = [
   { quote: "We realised the issue wasn't capability. It was exhaustion.", who: "Operations lead · heard in a Team Reset" },
   { quote: "The team stopped operating in survival mode.", who: "Engineering manager · six weeks in" },
   { quote: "We finally had language for what was happening.", who: "Founder · 30-person team" },
-  { quote: "It changed how we work together, week to week — not just that one day.", who: "People lead · quarter two" },
+  { quote: "It changed how we work together, week to week. Not just that one day.", who: "People lead · quarter two" },
 ];
 
 function Proof() {
@@ -80,7 +80,7 @@ function Proof() {
     <section className="section proof">
       <div className="wrap">
         <div className="proof-head reveal">
-          <span className="eyebrow"><span className="num">05</span> What teams notice</span>
+          <span className="eyebrow"><span className="num">06</span> What teams notice</span>
           <h2 className="h-lg proof-title">
             The shift people describe isn't motivation. It's <span className="accent-ital">relief.</span>
           </h2>

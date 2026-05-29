@@ -3,7 +3,7 @@
 const METHOD_STEPS = [
   {
     n: "01", key: "Diagnose",
-    desc: "Identify the behavioural friction and disengagement patterns already in motion — before they're explained away as personality.",
+    desc: "Identify the behavioural friction and disengagement patterns already in motion, before they're explained away as personality.",
   },
   {
     n: "02", key: "Reset",
@@ -11,7 +11,7 @@ const METHOD_STEPS = [
   },
   {
     n: "03", key: "Embed",
-    desc: "Install sustainable operating rhythms and leadership practices into the real week — meetings, decisions, reflection.",
+    desc: "Install sustainable operating rhythms and leadership practices into the real week: meetings, decisions, reflection.",
   },
   {
     n: "04", key: "Reinforce",
@@ -24,8 +24,8 @@ const INSTALLS = [
   ["Behavioural reinforcement", "Systems that reward the right operating patterns so they survive past the post-workshop glow."],
   ["Meeting structures", "Formats that protect attention, sharpen decisions, and stop work from defaulting to reactive."],
   ["Reflection cadences", "Regular, low-friction checkpoints that catch drift while it's still cheap to correct."],
-  ["Safe accountability", "Psychological safety and ownership held together — candour without blame, follow-through without fear."],
-  ["Sustainable patterns", "Operating defaults a team can actually keep — pace that compounds instead of burning down."],
+  ["Safe accountability", "Psychological safety and ownership held together: candour without blame, follow-through without fear."],
+  ["Sustainable patterns", "Operating defaults a team can actually keep: pace that compounds instead of burning down."],
 ];
 
 function Method() {
@@ -40,7 +40,7 @@ function Method() {
           <p className="lede">
             Because motivation without reinforcement rarely survives operational
             pressure. We don't run a good day in a room. We install the way a team
-            operates — and the systems that keep it.
+            operates, and the systems that keep it.
           </p>
         </div>
 
@@ -69,7 +69,7 @@ function Method() {
         {/* 4-step model */}
         <div className="model reveal">
           <div className="model-head">
-            <h3 className="h-lg">A behavioural systems model — not a pep talk.</h3>
+            <h3 className="h-lg">A behavioural systems model, not a pep talk.</h3>
             <p className="model-sub">Four moves, run as a loop. The fourth feeds the first: reinforcement keeps diagnosis honest.</p>
           </div>
           <div className="model-flow">
@@ -100,7 +100,7 @@ function Method() {
         {/* what we install */}
         <div className="installs reveal">
           <div className="installs-head">
-            <span className="eyebrow"><span className="num">— </span>What gets installed</span>
+            <span className="eyebrow"><span className="num"></span>What gets installed</span>
             <h3 className="h-lg">Six operating patterns, embedded into the week.</h3>
           </div>
           <div className="installs-grid">
@@ -117,10 +117,10 @@ function Method() {
         {/* interactive matrix */}
         <div className="matrix-block reveal">
           <div className="matrix-head">
-            <span className="eyebrow"><span className="num">— </span>Diagnose</span>
+            <span className="eyebrow"><span className="num"></span>Diagnose</span>
             <h3 className="h-lg">Where is your team right now?</h3>
             <p className="lede">
-              Two readings — how activated the team is, and how much it's oriented
+              Two readings: how activated the team is, and how much it's oriented
               toward each other. Six zones. <strong>Click any zone</strong> to see what
               you'd notice, and the first move that helps.
             </p>

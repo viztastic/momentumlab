@@ -14,8 +14,9 @@ function FinalCTA({ variant = "A" }) {
           {c.head[0]} <span className="accent-ital">{c.head[1][0]}</span>{c.head[1][1]}
         </h2>
         <p className="final-sub">
-          Healthy teams are built — through reinforcement, trust, clarity and
-          sustainable operating patterns. Start with a five-minute read.
+          Sustainable performance is systemic. It's shaped by operating patterns,
+          reinforced over time, and built so an organisation never depends entirely
+          on its heroes. Start with a five-minute read.
         </p>
         <div className="final-cta">
           <a href="#checkin" className="btn btn-primary">
@@ -33,13 +34,13 @@ function Footer() {
   const cols = [
     ["Explore", [["The problem", "#problem"], ["The method", "#method"], ["The check-in", "#checkin"], ["Workshops", "#workshops"]]],
     ["Workshops", [["Team Reset", "#workshops"], ["Leadership Enablement", "#workshops"], ["Performance Systems", "#workshops"]]],
-    ["Company", [["What we do", "#top"], ["The method", "#method"], ["Get in touch", "#final"]]],
+    ["Company", [["How it works", "How It Works.html"], ["The method", "#method"], ["Get in touch", "#final"]]],
   ];
   return (
     <footer className="footer">
       <div className="wrap footer-inner">
         <div className="footer-brand">
-          <Logo />
+          <Logo night />
           <p className="footer-tagline">
             A behavioural operating system for modern teams. We help organisations
             correct behavioural drift before disengagement becomes culture.

@@ -5,12 +5,12 @@ const CHECKIN_Q = [
   {
     id: "gives",
     prompt: "When a week gets heavy, what tends to give first?",
-    ack: "Noted — that's usually the earliest signal.",
+    ack: "Noted. That's usually the earliest signal.",
     options: [
-      { label: "Clarity — priorities blur", v: "clarity" },
-      { label: "Energy — people run on reserves", v: "energy" },
-      { label: "Trust — people stop reaching out", v: "trust" },
-      { label: "Initiative — folks wait to be told", v: "initiative" },
+      { label: "Clarity, priorities blur", v: "clarity" },
+      { label: "Energy, people run on reserves", v: "energy" },
+      { label: "Trust, people stop reaching out", v: "trust" },
+      { label: "Initiative, folks wait to be told", v: "initiative" },
     ],
   },
   {
@@ -26,7 +26,7 @@ const CHECKIN_Q = [
   },
   {
     id: "meetings",
-    prompt: "Last one — what's the honest state of your meetings?",
+    prompt: "Last one: what's the honest state of your meetings?",
     ack: "That's enough to give you a real read.",
     options: [
       { label: "Sharp and decisive", v: "sharp" },
@@ -46,7 +46,7 @@ function readResult(ans) {
     return {
       zone: "Running hot",
       tone: "amber",
-      summary: "Your team is activated but stretched — capacity is the constraint, not commitment.",
+      summary: "Your team is activated but stretched. Capacity is the constraint, not commitment.",
       blockers: ["Depleted capacity", "Reactive default", "Meetings draining energy"],
       next: ["Reset the load before adding rhythm", "Protect attention in your core meeting", "Name what's been absorbing the team unseen"],
     };
@@ -63,7 +63,7 @@ function readResult(ans) {
   return {
     zone: "Holding momentum",
     tone: "olive",
-    summary: "You're in a good zone — the risk is drift back once pressure returns.",
+    summary: "You're in a good zone. The risk is drifting back once pressure returns.",
     blockers: ["No cadence to hold the change", "Reliance on a few people", "Clarity that depends on memory"],
     next: ["Lock the rhythm that's working", "Spread ownership wider", "Reinforce it before the next busy stretch"],
   };
@@ -115,7 +115,7 @@ function CheckinDemo() {
       <div className="checkin-stream" ref={scrollRef}>
         {!done && step === 0 && (
           <div className="bubble bot intro">
-            No labels. No personality types. Just practical clarity — three quick reads on how your team is operating.
+            No labels. No personality types. Just practical clarity. Three quick reads on how your team is operating.
           </div>
         )}
 
@@ -188,13 +188,13 @@ function Checkin() {
           </h2>
           <p className="lede">
             Not a personality test. Not a diagnosis. A fast, honest read on what's
-            quietly draining your team's momentum — and the first practical moves
+            quietly draining your team's momentum, and the first practical moves
             that help.
           </p>
           <ul className="checkin-points">
             <li>Momentum blockers and disengagement patterns</li>
             <li>Leadership friction and operating-stress signals</li>
-            <li>Practical next steps — no jargon, no labels</li>
+            <li>Practical next steps. No jargon, no labels</li>
           </ul>
           <a href="#workshops" className="btn btn-primary checkin-cta">
             See what's breaking momentum
