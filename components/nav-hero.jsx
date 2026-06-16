@@ -2,13 +2,13 @@
 
 function Logo({ night }) {
   return (
-    <a href="#top" className="logo" aria-label="Momentum Lab home">
+    <a href="#top" className="logo" aria-label="The Conditions home">
       <svg className="logo-mark" viewBox="0 0 28 28" aria-hidden="true">
         <circle cx="14" cy="14" r="12.5" fill="none" stroke={night ? "var(--on-night-2)" : "var(--ink)"} strokeWidth="1.4"/>
         <path d="M7 17.5 C 10 9, 13 9, 14 13.5 C 15 18, 18 18, 21 10.5" fill="none" stroke="var(--accent)" strokeWidth="2" strokeLinecap="round"/>
       </svg>
       <span className="logo-word" style={{ color: night ? "var(--on-night)" : "var(--ink)" }}>
-        Momentum<span className="logo-lab">Lab</span>
+        The <span className="logo-lab">Conditions</span>
       </span>
     </a>
   );
@@ -28,9 +28,9 @@ function Nav() {
     return () => { document.body.style.overflow = ""; };
   }, [open]);
   const links = [
-    ["The problem", "#problem"],
-    ["The method", "#method"],
+    ["The diagnostic", "#method"],
     ["Check-in", "#checkin"],
+    ["Development", "#workshops"],
     ["How it works", "How It Works.html"],
   ];
   return (
@@ -68,12 +68,12 @@ function Nav() {
 
 const HERO_COPY = {
   A: {
-    eyebrow: "A behavioural operating system for modern teams",
-    head: ["Human flourishing shouldn't be reserved for", ["top performers", "."]],
+    eyebrow: "The conditions for people to thrive at work",
+    head: ["Flourishing shouldn't be reserved for", ["top performers", "."]],
   },
   B: {
-    eyebrow: "A behavioural operating system for modern teams",
-    head: ["Sustainable momentum scales better than", ["heroics", "."]],
+    eyebrow: "The conditions for people to thrive at work",
+    head: ["Everyone has a path to becoming a", ["flourishing contributor", "."]],
   },
 };
 
@@ -100,9 +100,9 @@ function Hero({ variant = "A" }) {
           </h1>
           <div className="hero-sub reveal">
             <p className="lede">
-              Momentum Lab helps organisations build healthier operating systems
-              for sustainable contribution, trust and momentum across teams,
-              not just in a few exceptional people.
+              We show you where every person stands today — then pinpoint
+              the development that moves each of them toward becoming a flourishing
+              contributor.
             </p>
           </div>
           <div className="hero-cta reveal">
@@ -110,10 +110,10 @@ function Hero({ variant = "A" }) {
               Run the 5-minute check-in
               <svg className="arrow" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
-            <a href="#workshops" className="btn btn-ghost">Book a team reset workshop</a>
+            <a href="#method" className="btn btn-ghost">See where your team lands</a>
           </div>
           <p className="hero-trust reveal">
-            Diagnosed, installed and reinforced over time. Not a one-day workshop.
+            A clear read on every person — and a path for each one toward flourishing.
           </p>
         </div>
       </div>

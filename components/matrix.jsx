@@ -135,8 +135,12 @@ function MomentumMatrix() {
           <div className="mtx-signals">
             {zone.signals.map((s) => <span key={s} className="mtx-signal">{s}</span>)}
           </div>
-          <div className="mtx-detail-label" style={{ marginTop: 22 }}>The intervention</div>
-          <p className="mtx-move">{zone.move}</p>
+          <a className="mtx-tease" href="#checkin">
+            There's a specific first move from here.
+            <span className="mtx-tease-link">Find yours in the check-in
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
         </div>
       </aside>
     </div>

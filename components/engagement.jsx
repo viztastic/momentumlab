@@ -9,13 +9,9 @@ const ENGAGEMENT_PHASES = [
 
 const DELIVERABLES = [
   ["Behavioural diagnostic", "A clear read on disengagement patterns and momentum blockers across your teams."],
-  ["Team behavioural map", "Where each team sits on the matrix, and the first move that helps."],
-  ["Leadership operating review", "How current leadership rhythms either reinforce or erode momentum."],
   ["Operating-rhythm redesign", "Reworked cadences for meetings, decisions and reflection that fit the real week."],
   ["Accountability structures", "Psychologically safe ways to hold follow-through without fear or blame."],
-  ["Sustainable contribution playbook", "The team's agreed operating defaults, written down and usable."],
-  ["Reinforcement framework", "The mechanisms that keep new behaviour alive under operational pressure."],
-  ["Post-workshop check-ins", "Scheduled behavioural reinforcement sessions at 30, 60 and 90 days."],
+  ["Reinforcement framework", "Scheduled check-ins and structures that keep new behaviour alive under pressure."],
 ];
 
 function DocIcon() {
@@ -37,9 +33,8 @@ function Engagement() {
             It starts with a workshop. It ends with a <span className="accent-ital">system.</span>
           </h2>
           <p className="lede">
-            Every engagement is built around a world-class workshop, then runs on the
-            same behavioural spine: Diagnose, Reset, Embed, Reinforce. You can book the
-            workshop on its own, or let us leave the whole operating system behind.
+            Every engagement runs on the same spine: Diagnose, Reset, Embed, Reinforce.
+            Book the workshop on its own, or let us leave the whole system behind.
           </p>
         </div>
 

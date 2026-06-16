@@ -10,7 +10,7 @@ const WORKSHOPS = [
   },
   {
     tag: "Leadership Enablement",
-    format: "6 weeks · leads & managers · hybrid",
+    format: "6 weeks · managers · hybrid",
     lead: "For the people who set the tone. Install the leadership rhythms that reinforce trust and momentum without adding overhead.",
     points: ["Leadership rhythms that model the behaviour", "Reading drift early, before it hardens", "Accountability that stays psychologically safe", "Reinforcement built into the week"],
     change: "By week six: leaders catch drift instead of inheriting it.",
@@ -18,7 +18,7 @@ const WORKSHOPS = [
   },
   {
     tag: "Sustainable Performance Systems",
-    format: "Ongoing · org-wide · quarterly cadence",
+    format: "Ongoing · org-wide cadence",
     lead: "For organisations done with the burnout cycle. Embed the operating patterns that make momentum repeatable across teams.",
     points: ["Org-wide behavioural reinforcement systems", "Reflection cadences that prevent regression", "Sustainable operating defaults, not heroics", "Quarterly read on behavioural momentum"],
     change: "Over a quarter: momentum becomes a system, not a mood.",
@@ -30,13 +30,14 @@ function Workshops() {
     <section className="section workshops" id="workshops">
       <div className="wrap">
         <div className="workshops-head reveal">
-          <span className="eyebrow"><span className="num">04</span> Workshops</span>
+          <span className="eyebrow">Development</span>
           <h2 className="h-xl">
-            Workshops that change how teams <span className="accent-ital">actually operate.</span>
+            Development that moves people <span className="accent-ital">toward flourishing.</span>
           </h2>
           <p className="lede">
-            Not a day of energy. A change in the operating system. Each one installs
-            specific behaviours, then reinforces them long after we've left the room.
+            Your read points to what each team needs next. We deliver the
+            development that moves them forward — and makes flourishing the
+            default, not the exception.
           </p>
         </div>
 
@@ -47,17 +48,9 @@ function Workshops() {
               <div className="workshop-format">{w.format}</div>
               <h3 className="workshop-tag">{w.tag}</h3>
               <p className="workshop-lead">{w.lead}</p>
-              <ul className="workshop-points">
-                {w.points.map((p) => (
-                  <li key={p}>
-                    <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 5" fill="none" stroke="var(--accent)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                    {p}
-                  </li>
-                ))}
-              </ul>
               <div className="workshop-change">{w.change}</div>
               <a href="#final" className="workshop-cta">
-                Book {w.tag}
+                Book this development
                 <svg className="arrow" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
               </a>
             </article>

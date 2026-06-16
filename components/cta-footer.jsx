@@ -1,8 +1,8 @@
 /* global React, Logo */
 
 const FINAL_COPY = {
-  A: { head: ["Momentum is not a", ["personality", " trait."]] },
-  B: { head: ["Healthy teams aren't", ["lucky", " teams."]] },
+  A: { head: ["Flourishing isn't a", ["personality", " type."]] },
+  B: { head: ["Flourishing shouldn't depend on", ["luck", "."]] },
 };
 
 function FinalCTA({ variant = "A" }) {
@@ -14,9 +14,8 @@ function FinalCTA({ variant = "A" }) {
           {c.head[0]} <span className="accent-ital">{c.head[1][0]}</span>{c.head[1][1]}
         </h2>
         <p className="final-sub">
-          Sustainable performance is systemic. It's shaped by operating patterns,
-          reinforced over time, and built so an organisation never depends entirely
-          on its heroes. Start with a five-minute read.
+          It's a state you can measure — and move people toward. Start with a
+          five-minute read of where your people stand today.
         </p>
         <div className="final-cta">
           <a href="#checkin" className="btn btn-primary">
@@ -42,8 +41,8 @@ function Footer() {
         <div className="footer-brand">
           <Logo night />
           <p className="footer-tagline">
-            A behavioural operating system for modern teams. We help organisations
-            correct behavioural drift before disengagement becomes culture.
+            We create the conditions for every person to thrive — diagnosed
+            clearly, then developed deliberately.
           </p>
           <a href="#checkin" className="btn btn-primary footer-btn">Run the (free) check-in</a>
         </div>
@@ -57,7 +56,7 @@ function Footer() {
         </div>
       </div>
       <div className="wrap footer-fine">
-        <span>© 2026 Momentum Lab</span>
+        <span>© 2026 The Conditions</span>
         <span>Behavioural systems · Organisational health · Sustainable performance</span>
       </div>
     </footer>

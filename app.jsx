@@ -81,13 +81,9 @@ function App() {
       <Nav />
       <main>
         <Hero variant={t.heroVariant} />
-        <Problem />
         <Method />
         <Checkin />
         <Workshops />
-        <Engagement />
-        <Proof />
-        <Belief />
         <FinalCTA variant={t.finalVariant} />
       </main>
       <Footer />

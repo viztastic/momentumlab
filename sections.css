@@ -1,5 +1,5 @@
 /* ============================================================
-   Momentum Lab — section styles
+   The Conditions — section styles
    ============================================================ */
 
 /* ---------- NAV ---------- */
@@ -60,7 +60,7 @@
 .hero { padding-top: clamp(104px, 13vh, 140px); padding-bottom: clamp(56px, 8vw, 104px); }
 .hero-visual { margin-bottom: clamp(36px, 5vw, 60px); }
 .hero-img {
-  width: 100%; height: clamp(260px, 44vh, 460px); display: block;
+  width: 100%; height: clamp(170px, 24vh, 260px); display: block;
   box-shadow: 0 40px 80px -54px rgba(40,20,25,.5);
 }
 .hero-copy { max-width: 19ch; }
@@ -82,7 +82,7 @@
   .hero-trust { grid-column: 2; grid-row: 3; }
 }
 @media (max-width: 560px) {
-  .hero-img { height: clamp(220px, 40vh, 320px); }
+  .hero-img { height: clamp(150px, 22vh, 210px); }
 }
 
 /* ---------- PROBLEM (dark moment) ---------- */
@@ -164,10 +164,10 @@
 .installs-head { max-width: 640px; }
 .installs-head h3 { margin-top: 14px; }
 .installs-grid { margin-top: 40px; display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2vw, 28px); }
-.install { padding: 26px 24px 28px; border-radius: var(--radius); background: var(--paper-2); border: 1px solid var(--line-soft); transition: transform .3s var(--ease), box-shadow .3s var(--ease); }
+.install { padding: 22px 22px; border-radius: var(--radius); background: var(--paper-2); border: 1px solid var(--line-soft); display: flex; align-items: baseline; gap: 13px; transition: transform .3s var(--ease), box-shadow .3s var(--ease); }
 .install:hover { transform: translateY(-4px); box-shadow: 0 24px 44px -30px rgba(40,30,15,.45); }
-.install-i { font-family: var(--serif); font-size: 15px; color: var(--accent); }
-.install-title { font-size: 21px; margin-top: 10px; }
+.install-i { font-family: var(--serif); font-size: 15px; color: var(--accent); flex: none; }
+.install-title { font-size: 20px; }
 .install-desc { margin-top: 11px; font-size: 14.5px; line-height: 1.5; color: var(--ink-2); }
 @media (max-width: 800px) { .installs-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 520px) { .installs-grid { grid-template-columns: 1fr; } }
@@ -203,7 +203,9 @@
 .mtx-detail-label { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); }
 .mtx-signals { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px; }
 .mtx-signal { font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: 999px; background: var(--paper-2); border: 1px solid var(--line); color: var(--ink-2); white-space: nowrap; }
-.mtx-move { margin-top: 12px; font-size: 15.5px; line-height: 1.5; color: var(--ink); }
+.mtx-tease { display: block; margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 14.5px; line-height: 1.45; color: var(--ink-2); text-decoration: none; }
+.mtx-tease-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 7px; font-weight: 600; color: var(--accent); transition: gap .2s, color .2s; }
+.mtx-tease:hover .mtx-tease-link { gap: 10px; color: var(--accent-deep); }
 @media (max-width: 860px) {
   .mtx { grid-template-columns: 1fr; }
   .mtx-detail { position: static; }
@@ -272,8 +274,8 @@
 /* begin-together email capture */
 .checkin-begin { padding: 20px; border-top: 1px solid var(--line-soft); background: var(--accent-tint); }
 .checkin-begin-label { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-deep); }
-.checkin-begin-copy { margin-top: 8px; font-size: 14px; line-height: 1.45; color: var(--ink-2); }
-.checkin-begin-form { margin-top: 14px; display: flex; gap: 9px; }
+.checkin-begin-copy { font-size: 14px; line-height: 1.45; color: var(--ink-2); }
+.checkin-begin-form { margin-top: 12px; display: flex; gap: 9px; }
 .checkin-begin-input { flex: 1; min-width: 0; font-family: var(--sans); font-size: 15px; color: var(--ink); background: var(--surface); border: 1.5px solid var(--line); border-radius: 11px; padding: 12px 15px; transition: border-color .2s; }
 .checkin-begin-input::placeholder { color: var(--ink-4); }
 .checkin-begin-input:focus { outline: none; border-color: var(--accent); }
@@ -290,11 +292,11 @@
 .workshops-head { max-width: 720px; }
 .workshops-head h2 { margin-top: 22px; }
 .workshops-head .lede { margin-top: 22px; }
-.workshops-grid { margin-top: clamp(40px, 5vw, 64px); display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(18px, 2vw, 26px); align-items: start; }
+.workshops-grid { margin-top: clamp(40px, 5vw, 64px); display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(18px, 2vw, 26px); align-items: stretch; }
 .workshop { position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 30px 28px 28px; display: flex; flex-direction: column; transition: transform .3s var(--ease), box-shadow .3s var(--ease); }
 .workshop:hover { transform: translateY(-5px); box-shadow: 0 30px 56px -36px rgba(40,30,15,.5); }
 .workshop.feature { background: var(--night); color: var(--on-night); border-color: var(--night); }
-.workshop-pin { position: absolute; top: -11px; left: 28px; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #fff; background: var(--accent); padding: 5px 12px; border-radius: 999px; }
+.workshop-pin { position: absolute; top: 18px; right: 18px; left: auto; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #fff; background: var(--accent); padding: 5px 12px; border-radius: 999px; }
 .workshop-format { font-size: 12.5px; font-weight: 600; letter-spacing: .04em; color: var(--ink-3); }
 .workshop.feature .workshop-format { color: var(--on-night-3); }
 .workshop-tag { font-size: 26px; margin-top: 10px; }
@@ -306,7 +308,7 @@
 .workshop-points li { display: flex; gap: 11px; align-items: flex-start; font-size: 14.5px; line-height: 1.4; color: var(--ink); }
 .workshop.feature .workshop-points li { color: var(--on-night); }
 .workshop-points svg { flex: none; margin-top: 2px; }
-.workshop-change { font-size: 14px; font-style: italic; color: var(--accent); margin-top: 4px; }
+.workshop-change { font-size: 14px; font-style: italic; color: var(--accent); margin-top: auto; padding-top: 20px; }
 .workshop.feature .workshop-change { color: color-mix(in oklab, var(--accent) 60%, #fff); }
 .workshop-cta { margin-top: 22px; display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: var(--ink); align-self: flex-start; border-bottom: 1.5px solid var(--accent); padding-bottom: 3px; transition: gap .2s, color .2s; }
 .workshop.feature .workshop-cta { color: var(--on-night); }

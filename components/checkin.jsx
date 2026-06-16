@@ -160,27 +160,10 @@ function CheckinDemo() {
               <h4 style={{ color: t.ink }}>{result.zone}</h4>
               <p style={{ color: t.ink }}>{result.summary}</p>
             </div>
-            <div className="checkin-result-body">
-              <div className="crb-col">
-                <div className="crb-label">What's breaking momentum</div>
-                <ul className="crb-list blockers">
-                  {result.blockers.map((b) => <li key={b}>{b}</li>)}
-                </ul>
-              </div>
-              <div className="crb-col">
-                <div className="crb-label">Practical next steps</div>
-                <ul className="crb-list next">
-                  {result.next.map((b) => <li key={b}>{b}</li>)}
-                </ul>
-              </div>
-            </div>
             <div className="checkin-begin">
               {!sent ? (
                 <React.Fragment>
-                  <div className="checkin-begin-head">
-                    <span className="checkin-begin-label">Where this goes next</span>
-                    <p className="checkin-begin-copy">A read is a start, not an answer. Leave your email and we'll send the full five-minute check-in and begin the conversation together.</p>
-                  </div>
+                  <p className="checkin-begin-copy">Want the full read and the first moves that help? We'll send the five-minute check-in.</p>
                   <form className="checkin-begin-form" onSubmit={submitEmail}>
                     <input
                       type="email"
@@ -208,7 +191,7 @@ function CheckinDemo() {
               )}
             </div>
             <div className="checkin-result-foot">
-              <span>This is a 3-question taster. The full check-in takes five minutes.</span>
+              <span>3-question taster.</span>
               <button className="checkin-restart" onClick={reset}>Run it again ↺</button>
             </div>
           </div>
@@ -223,22 +206,21 @@ function Checkin() {
     <section className="section checkin" id="checkin">
       <div className="wrap checkin-grid">
         <div className="checkin-copy reveal">
-          <span className="eyebrow"><span className="num">03</span> The check-in</span>
+          <span className="eyebrow">The check-in</span>
           <h2 className="h-xl">
-            A behavioural momentum check-in. <span className="accent-ital">Five minutes.</span>
+            See where your team stands. <span className="accent-ital">Five minutes.</span>
           </h2>
           <p className="lede">
-            Not a personality test. Not a diagnosis. A fast, honest read on what's
-            quietly draining your team's momentum, and the first practical moves
-            that help.
+            A fast, honest read on where your people sit today — and the first
+            move that starts shifting them toward flourishing.
           </p>
           <ul className="checkin-points">
-            <li>Momentum blockers and disengagement patterns</li>
-            <li>Leadership friction and operating-stress signals</li>
-            <li>Practical next steps. No jargon, no labels</li>
+            <li>Where each part of the team sits today</li>
+            <li>Who's thriving, who's drifting, and why</li>
+            <li>The first practical move toward flourishing</li>
           </ul>
           <a href="#workshops" className="btn btn-primary checkin-cta">
-            See what's breaking momentum
+            See where your team lands
             <svg className="arrow" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
           <p className="checkin-note">Try the live taster on the right →</p>

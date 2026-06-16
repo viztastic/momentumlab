@@ -3,12 +3,12 @@ const { useState, useEffect } = React;
 
 function HowLogo() {
   return (
-    <a href="Momentum Lab.html" className="logo" aria-label="Momentum Lab home">
+    <a href="TheConditions.html" className="logo" aria-label="The Conditions home">
       <svg className="logo-mark" viewBox="0 0 28 28" aria-hidden="true">
         <circle cx="14" cy="14" r="12.5" fill="none" stroke="var(--ink)" strokeWidth="1.4"/>
         <path d="M7 17.5 C 10 9, 13 9, 14 13.5 C 15 18, 18 18, 21 10.5" fill="none" stroke="var(--accent)" strokeWidth="2" strokeLinecap="round"/>
       </svg>
-      <span className="logo-word" style={{ color: "var(--ink)" }}>Momentum<span className="logo-lab">Lab</span></span>
+      <span className="logo-word" style={{ color: "var(--ink)" }}>The <span className="logo-lab">Conditions</span></span>
     </a>
   );
 }
@@ -38,7 +38,7 @@ function HowNav() {
         <nav className="nav-links">
           {links.map(([l, h]) => <a key={h} href={h}>{l}</a>)}
         </nav>
-        <a href="Momentum Lab.html#checkin" className="btn btn-primary nav-cta">Run the (free) check-in</a>
+        <a href="TheConditions.html#checkin" className="btn btn-primary nav-cta">Run the (free) check-in</a>
         <button
           className={"nav-toggle" + (open ? " open" : "")}
           aria-label={open ? "Close menu" : "Open menu"}
@@ -52,7 +52,7 @@ function HowNav() {
         <nav className="nav-mobile-links">
           {links.map(([l, h]) => <a key={h} href={h} onClick={() => setOpen(false)}>{l}</a>)}
         </nav>
-        <a href="Momentum Lab.html#checkin" className="btn btn-primary nav-mobile-cta" onClick={() => setOpen(false)}>
+        <a href="TheConditions.html#checkin" className="btn btn-primary nav-mobile-cta" onClick={() => setOpen(false)}>
           Run the (free) check-in
         </a>
       </div>
@@ -130,7 +130,7 @@ function HowPage() {
         {/* intro */}
         <section className="section how-hero" id="top">
           <div className="wrap">
-            <a href="Momentum Lab.html" className="how-back reveal">← Back to Momentum Lab</a>
+            <a href="TheConditions.html" className="how-back reveal">← Back to The Conditions</a>
             <span className="eyebrow reveal">How it works</span>
             <h1 className="h-display how-hero-head reveal">
               What you're actually <span className="accent-ital">building.</span>
@@ -141,10 +141,10 @@ function HowPage() {
               the room, and what your organisation walks away with.
             </p>
             <div className="how-hero-cta reveal">
-              <a href="Momentum Lab.html#checkin" className="btn btn-primary">Run the 5-minute check-in
+              <a href="TheConditions.html#checkin" className="btn btn-primary">Run the 5-minute check-in
                 <svg className="arrow" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
               </a>
-              <a href="Momentum Lab.html#workshops" className="btn btn-ghost">Book a workshop</a>
+              <a href="TheConditions.html#workshops" className="btn btn-ghost">Book a workshop</a>
             </div>
           </div>
         </section>
@@ -251,7 +251,7 @@ function HowPage() {
           <div className="wrap">
             <div className="how-head reveal">
               <span className="eyebrow"><span className="num">05</span> What changes</span>
-              <h2 className="h-lg">What's different after Momentum Lab.</h2>
+              <h2 className="h-lg">What's different after The Conditions.</h2>
               <p className="lede">Not a mood lift. A measurable shift in how the organisation operates.</p>
             </div>
             <div className="how-ba reveal">
@@ -309,10 +309,10 @@ function HowPage() {
               <h2 className="h-xl">Momentum is not a <span className="accent-ital">personality trait.</span></h2>
               <p className="final-sub">It's built: diagnosed, installed and reinforced. Start with a five-minute read of where your teams stand.</p>
               <div className="final-cta">
-                <a href="Momentum Lab.html#checkin" className="btn btn-primary">Run the 5-minute check-in
+                <a href="TheConditions.html#checkin" className="btn btn-primary">Run the 5-minute check-in
                   <svg className="arrow" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                 </a>
-                <a href="Momentum Lab.html#workshops" className="btn btn-ghost">Book a workshop</a>
+                <a href="TheConditions.html#workshops" className="btn btn-ghost">Book a workshop</a>
               </div>
             </div>
           </div>
@@ -322,15 +322,15 @@ function HowPage() {
       <footer className="footer">
         <div className="wrap footer-inner">
           <div className="footer-brand">
-            <a href="Momentum Lab.html" className="logo" aria-label="Momentum Lab home">
+            <a href="TheConditions.html" className="logo" aria-label="The Conditions home">
               <svg className="logo-mark" viewBox="0 0 28 28" aria-hidden="true">
                 <circle cx="14" cy="14" r="12.5" fill="none" stroke="var(--on-night-2)" strokeWidth="1.4"/>
                 <path d="M7 17.5 C 10 9, 13 9, 14 13.5 C 15 18, 18 18, 21 10.5" fill="none" stroke="var(--accent)" strokeWidth="2" strokeLinecap="round"/>
               </svg>
-              <span className="logo-word" style={{ color: "var(--on-night)" }}>Momentum<span className="logo-lab">Lab</span></span>
+              <span className="logo-word" style={{ color: "var(--on-night)" }}>The <span className="logo-lab">Conditions</span></span>
             </a>
             <p className="footer-tagline">A behavioural operating system for modern teams.</p>
-            <a href="Momentum Lab.html#checkin" className="btn btn-primary footer-btn">Run the (free) check-in</a>
+            <a href="TheConditions.html#checkin" className="btn btn-primary footer-btn">Run the (free) check-in</a>
           </div>
           <div className="footer-cols">
             <div className="footer-col">
@@ -341,20 +341,20 @@ function HowPage() {
               <a href="#changes">What changes</a>
             </div>
             <div className="footer-col">
-              <div className="footer-col-title">Momentum Lab</div>
-              <a href="Momentum Lab.html#problem">The problem</a>
-              <a href="Momentum Lab.html#method">The method</a>
-              <a href="Momentum Lab.html#workshops">Workshops</a>
+              <div className="footer-col-title">The Conditions</div>
+              <a href="TheConditions.html#problem">The problem</a>
+              <a href="TheConditions.html#method">The method</a>
+              <a href="TheConditions.html#workshops">Workshops</a>
             </div>
             <div className="footer-col">
               <div className="footer-col-title">Start</div>
-              <a href="Momentum Lab.html#checkin">The check-in</a>
-              <a href="Momentum Lab.html#final">Get in touch</a>
+              <a href="TheConditions.html#checkin">The check-in</a>
+              <a href="TheConditions.html#final">Get in touch</a>
             </div>
           </div>
         </div>
         <div className="wrap footer-fine">
-          <span>© 2026 Momentum Lab</span>
+          <span>© 2026 The Conditions</span>
           <span>Behavioural systems · Organisational health · Sustainable performance</span>
         </div>
       </footer>
